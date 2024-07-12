@@ -14,9 +14,13 @@ jobs:
 
     - run: flatpak remote-add --if-not-exists --user flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
     - run: pip install aiohttp toml
+
+    - run: echo -n "$GPG_SIGNING_KEY" | base64 --decode | gpg --import
+      env: GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
+
     - run: python3 ci-build.py
-    - run: "flatpak build-bundle repo --runtime-repo='https://dl.flathub.org/repo/flathub.flatpakrepo' io.github.urlordjames.GreenUpdater.flatpak io.github.urlordjames.GreenUpdater"
-    - run: flatpak build-update-repo --prune repo
+    - run: "flatpak build-bundle repo --runtime-repo='https://dl.flathub.org/repo/flathub.flatpakrepo' --gpg-sign=urlordjames io.github.urlordjames.GreenUpdater.flatpak io.github.urlordjames.GreenUpdater"
+    - run: flatpak build-update-repo --gpg-sign=urlordjames --prune repo
 
     -  uses: "actions/upload-artifact@v4"
        with:
