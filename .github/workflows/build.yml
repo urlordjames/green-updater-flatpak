@@ -11,4 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: flatpak remote-add --if-not-exists --user flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
+    - run: pip install aiohttp toml
     - run: python3 ci-build.py
