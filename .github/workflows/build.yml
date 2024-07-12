@@ -25,7 +25,6 @@ jobs:
        with:
          name: "pre-build repo"
          path: "repo"
-         if-no-files-found: error
 
   build-repo:
     needs: pull-repo
