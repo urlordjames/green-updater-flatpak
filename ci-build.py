@@ -7,7 +7,7 @@ def run(cmd):
 	result = os.system(cmd)
 	exit_code = os.waitstatus_to_exitcode(result)
 	if exit_code != 0:
-		exit()
+		exit(exit_code)
 
 with open("io.github.urlordjames.GreenUpdater.json", "r") as f:
 	parsed = json.load(f)
