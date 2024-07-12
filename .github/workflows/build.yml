@@ -3,7 +3,7 @@ name: "build-and-deploy"
 on: "push"
 
 jobs:
-  build-nix:
+  build-and-deploy:
     runs-on: "ubuntu-latest"
     container:
       image: "ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-23.08"
