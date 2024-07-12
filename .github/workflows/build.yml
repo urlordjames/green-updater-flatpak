@@ -6,10 +6,8 @@ jobs:
   build-nix:
     runs-on: "ubuntu-latest"
     container:
-      image: "bilelmoussaoui/flatpak-github-actions:freedesktop-23.08"
+      image: "ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-23.08"
 
     steps:
     - uses: actions/checkout@v4
-    - run: dnf install sudo -y
-    - uses: cachix/install-nix-action@v27
-    - run: nix develop .#ci --command ./build.sh
+    - run: python3 build-ci.py

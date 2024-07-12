@@ -38,19 +38,14 @@
 				};
 
 				buildPhase = "mkdir $out && cp Cargo.lock $out/Cargo.lock";
-			};
-			commonHook = "export CARGO_LOCK=${cargo-lock}/Cargo.lock";
-			commonShell = with pkgs; [
-				flatpak-cargo-vendor
-			]; in {
+			}; in {
 				devShells.default = pkgs.mkShell {
-					packages = commonShell ++ [ pkgs.flatpak-builder ];
-					shellHook = commonHook;
-				};
+					packages = with pkgs; [
+						flatpak-builder
+						flatpak-cargo-vendor
+					];
 
-				devShells.ci = pkgs.mkShell {
-					packages = commonShell;
-					shellHook = commonHook;
+					shellHook = "export CARGO_LOCK=${cargo-lock}/Cargo.lock";
 				};
 			}
 		);
