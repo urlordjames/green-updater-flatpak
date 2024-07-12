@@ -1,0 +1,6 @@
+[Flatpak Ref]
+Name=io.github.urlordjames.GreenUpdater
+Branch=stable
+Title=Green Updater
+RuntimeRepo=https://s3.us-east-2.amazonaws.com/green-updater/green-repo.flatpakrepo
+IsRuntime=false
