@@ -2,3 +2,5 @@
 Name=Green Updater
 Exec=green-updater
 Type=Application
+Icon=io.github.urlordjames.GreenUpdater
+Categories=Game;Network;Utility;
