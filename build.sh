@@ -1,3 +1,3 @@
 #!/bin/sh
 flatpak-cargo-vendor $CARGO_LOCK -o cargo-source.json
-./common-build.sh
+flatpak-builder --force-clean --user --install-deps-from=flathub --repo=repo --install builddir io.github.urlordjames.GreenUpdater.json
