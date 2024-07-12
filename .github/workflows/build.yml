@@ -64,6 +64,7 @@ jobs:
 
     - run: flatpak remote-add --if-not-exists --user flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
     - run: pip install aiohttp toml
+    - run: ls -lhaR
     - run: python3 ci-build.py
     - run: flatpak build-bundle repo io.github.urlordjames.GreenUpdater.flatpak io.github.urlordjames.GreenUpdater
     - run: flatpak build-update-repo --generate-static-deltas --prune repo
