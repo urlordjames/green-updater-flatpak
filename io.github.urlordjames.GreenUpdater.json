@@ -1,0 +1,36 @@
+{
+	"id": "io.github.urlordjames.GreenUpdater",
+	"runtime": "org.freedesktop.Platform",
+	"runtime-version": "23.08",
+	"sdk": "org.freedesktop.Sdk",
+	"sdk-extensions": [ "org.freedesktop.Sdk.Extension.rust-stable" ],
+	"command": "green-updater",
+	"finish-args": [
+		"--socket=fallback-x11",
+		"--socket=wayland",
+		"--device=dri",
+		"--share=network"
+	],
+	"build-options": {
+		"append-path": "/usr/lib/sdk/rust-stable/bin",
+		"env": {
+			"CARGO_HOME": "/run/build/green-updater/cargo"
+		}
+	},
+	"modules": [{
+		"name": "green-updater",
+		"buildsystem": "simple",
+		"build-commands": [
+			"cargo build --offline",
+			"install -Dm755 ./target/debug/green-updater /app/bin/green-updater"
+		],
+		"sources": [
+			{
+				"type": "git",
+				"url": "https://github.com/urlordjames/green-updater.git",
+				"commit": "6299bc8dc228af979e2f256167ae9cd6378e9255"
+			},
+			"cargo-source.json"
+		]
+	}]
+}
