@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>io.github.urlordjames.GreenUpdater</id>
+
+	<name>Green Updater</name>
+	<summary>updates Minecraft mods automatically</summary>
+
+	<metadata_license>MIT</metadata_license>
+	<project_license>AGPL-3.0-or-later</project_license>
+
+	<recommends>
+		<display_length compare="ge">500</display_length>
+	</recommends>
+
+	<description>
+		<p>intelligently updates Minecraft mods automatically from a manifest</p>
+	</description>
+
+	<launchable type="desktop-id">io.github.urlordjames.GreenUpdater.desktop</launchable>
+</component>
