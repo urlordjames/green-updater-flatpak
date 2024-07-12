@@ -21,7 +21,7 @@
 		"name": "green-updater",
 		"buildsystem": "simple",
 		"build-commands": [
-			"cargo build --offline",
+			"cargo build --offline --no-default-features",
 			"install -Dm755 ./target/debug/green-updater /app/bin/green-updater",
 			"install -Dm644 ./io.github.urlordjames.GreenUpdater.desktop /app/share/applications"
 		],
@@ -29,7 +29,7 @@
 			{
 				"type": "git",
 				"url": "https://github.com/urlordjames/green-updater.git",
-				"commit": "6299bc8dc228af979e2f256167ae9cd6378e9255"
+				"commit": "246fad45b63dad5e1d8cc2a6321edced593f1b63"
 			},
 			{
 				"type": "file",
