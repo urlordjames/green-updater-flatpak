@@ -18,7 +18,7 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-    -  run: nix-shell -p awscli2 --command "aws s3 cp s3://green-updater/flatpak repo"
+    -  run: nix-shell -p awscli2 --command "aws s3 cp s3://green-updater/flatpak/ repo"
     -  uses: "actions/upload-artifact@v4"
        with:
          name: "pre-build repo"
