@@ -2,6 +2,6 @@
 Name=io.github.urlordjames.GreenUpdater
 Branch=master
 Title=Green Updater
-Url=https://s3.us-east-2.amazonaws.com/green-updater/green-repo.flatpakrepo
+Url=https://s3.us-east-2.amazonaws.com/green-updater/flatpak/
 RuntimeRepo=https://dl.flathub.org/repo/flathub.flatpakrepo
 IsRuntime=false
