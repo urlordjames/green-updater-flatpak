@@ -21,8 +21,8 @@
 		"name": "green-updater",
 		"buildsystem": "simple",
 		"build-commands": [
-			"echo '#!/bin/sh\necho hi' > ./green-updater",
-			"install -Dm755 ./green-updater -t /app/bin",
+			"cargo build --offline --no-default-features",
+			"install -Dm755 ./target/debug/green-updater -t /app/bin",
 			"install -Dm644 ./io.github.urlordjames.GreenUpdater.desktop -t /app/share/applications"
 		],
 		"sources": [
