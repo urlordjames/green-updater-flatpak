@@ -66,7 +66,7 @@ jobs:
     - run: pip install aiohttp toml
     - run: python3 ci-build.py
     - run: flatpak build-bundle repo io.github.urlordjames.GreenUpdater.flatpak io.github.urlordjames.GreenUpdater
-    - run: flatpak build-update-repo --generate-static-deltas --prune repo
+    - run: flatpak build-update-repo --generate-static-deltas repo
 
     -  uses: "actions/upload-artifact@v4"
        with:
