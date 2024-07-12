@@ -6,7 +6,7 @@
 	<summary>updates Minecraft mods automatically</summary>
 
 	<metadata_license>MIT</metadata_license>
-	<project_license>AGPL-3.0-or-later</project_license>
+	<project_license>GPL-3.0-or-later</project_license>
 
 	<recommends>
 		<display_length compare="ge">500</display_length>
