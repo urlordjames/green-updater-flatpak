@@ -23,7 +23,6 @@ jobs:
     -  run: nix-shell -p awscli2 --command "aws s3 cp green-repo.flatpakrepo s3://green-updater/green-repo.flatpakrepo"
 
   build-repo:
-    needs: pull-repo
     runs-on: "ubuntu-latest"
     container:
       image: "ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-23.08"
