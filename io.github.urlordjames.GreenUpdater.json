@@ -21,8 +21,8 @@
 		"name": "green-updater",
 		"buildsystem": "simple",
 		"build-commands": [
-			"cargo build --offline --no-default-features",
-			"install -Dm755 ./target/debug/green-updater -t /app/bin",
+			"cargo build --offline --release --no-default-features",
+			"install -Dm755 ./target/release/green-updater -t /app/bin",
 			"install -Dm644 ./io.github.urlordjames.GreenUpdater.desktop -t /app/share/applications",
 			"install -Dm644 ./metainfo.xml /app/share/metainfo/io.github.urlordjames.GreenUpdater.metainfo.xml",
 			"install -Dm644 ./icon.png /app/share/icons/hicolor/256x256/apps/io.github.urlordjames.GreenUpdater.png"
