@@ -60,6 +60,8 @@ jobs:
         name: "pre-build repo"
         path: "repo"
 
+    - run: mkdir repo
+
     - run: flatpak remote-add --if-not-exists --user flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
     - run: pip install aiohttp toml
     - run: python3 ci-build.py
