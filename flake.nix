@@ -43,6 +43,7 @@
 					packages = with pkgs; [
 						flatpak-builder
 						flatpak-cargo-vendor
+						appstream
 					];
 
 					shellHook = "export CARGO_LOCK=${cargo-lock}/Cargo.lock";
