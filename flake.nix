@@ -34,7 +34,7 @@
 					owner = "urlordjames";
 					repo = "green-updater";
 					rev = green-updater-commit;
-					sha256 = "sha256-l/ywDCd9p7hiDaENpzMhcQMiLcLbHbjF5LW2p3ViLGo=";
+					sha256 = "sha256-Iu2xFFxIhSMhv38/jCaEjoXGgFixbpY4TlvB39yJIk8=";
 				};
 
 				buildPhase = "mkdir $out && cp Cargo.lock $out/Cargo.lock";
