@@ -21,7 +21,7 @@
 		"name": "green-updater",
 		"buildsystem": "simple",
 		"build-commands": [
-			"cargo build --offline --release --features flatpak",
+			"cargo build --offline --release --no-default-features --features flatpak",
 			"install -Dm755 ./target/release/green-updater -t /app/bin",
 			"install -Dm644 ./io.github.urlordjames.GreenUpdater.desktop -t /app/share/applications",
 			"install -Dm644 ./metainfo.xml /app/share/metainfo/io.github.urlordjames.GreenUpdater.metainfo.xml",
@@ -31,7 +31,7 @@
 			{
 				"type": "git",
 				"url": "https://github.com/urlordjames/green-updater.git",
-				"commit": "e55fb9ba51550fdb8e611b588871b8e4bad4fd24"
+				"commit": "6d298cc05cb3bf1451910e4fef059ce453952e63"
 			},
 			{
 				"type": "file",
