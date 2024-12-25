@@ -16,6 +16,6 @@ with open("io.github.urlordjames.GreenUpdater.json", "r") as f:
 run("git clone 'https://github.com/urlordjames/green-updater.git'")
 run(f"cd green-updater && git checkout {commit} && cd ..")
 run("git clone 'https://github.com/flatpak/flatpak-builder-tools.git'")
-run("cd flatpak-builder-tools && git checkout 338ce9c6512d49d98ae9a508d219ffe19b5144e8 && cd ..")
+run("cd flatpak-builder-tools && git checkout a1eb29c5f3038413ffafd4fea34e62c361c109ad && cd ..")
 run("python3 flatpak-builder-tools/cargo/flatpak-cargo-generator.py green-updater/Cargo.lock -o cargo-source.json")
 run("flatpak-builder --user --force-clean --disable-rofiles-fuse --install-deps-from=flathub --gpg-sign=urlordjames --repo=repo builddir io.github.urlordjames.GreenUpdater.json")
