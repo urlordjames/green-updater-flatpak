@@ -1,6 +1,6 @@
 {
 	inputs = {
-		nixpkgs.url = "github:nixos/nixpkgs/release-24.05";
+		nixpkgs.url = "github:nixos/nixpkgs/release-24.11";
 		flake-utils.url = "github:numtide/flake-utils";
 	};
 
@@ -14,8 +14,8 @@
 				src = pkgs.fetchFromGitHub {
 					owner = "flatpak";
 					repo = "flatpak-builder-tools";
-					rev = "338ce9c6512d49d98ae9a508d219ffe19b5144e8";
-					sha256 = "sha256-O4tXlkR7FmoqMC3jZZGrO19Ds0KUV07bWLqMMrFYL7w=";
+					rev = "a1eb29c5f3038413ffafd4fea34e62c361c109ad";
+					sha256 = "sha256-t8JYNSbPtSEv4ptdfBk6OBvPnXv5Jz0iag7ieoc0fUU=";
 				};
 
 				buildInputs = with pkgs; [ (python3.withPackages (p: with p; [
